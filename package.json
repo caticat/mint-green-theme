@@ -231,37 +231,37 @@
           },
           "mintGreenTheme.token.string": {
             "type": "string",
-            "default": "#B86A3A",
+            "default": "#C05000",
             "description": "Token color: strings"
           },
           "mintGreenTheme.token.keyword": {
             "type": "string",
-            "default": "#6A58DE",
+            "default": "#5533CC",
             "description": "Token color: keywords"
           },
           "mintGreenTheme.token.number": {
             "type": "string",
-            "default": "#A04868",
+            "default": "#B0006B",
             "description": "Token color: numbers"
           },
           "mintGreenTheme.token.function": {
             "type": "string",
-            "default": "#3A7A90",
+            "default": "#0070A0",
             "description": "Token color: function names"
           },
           "mintGreenTheme.token.type": {
             "type": "string",
-            "default": "#7A58A0",
+            "default": "#7700AA",
             "description": "Token color: types and classes"
           },
           "mintGreenTheme.token.variable": {
             "type": "string",
-            "default": "#2E7D6A",
+            "default": "#006B5A",
             "description": "Token color: variables"
           },
           "mintGreenTheme.token.parameter": {
             "type": "string",
-            "default": "#6A5A4A",
+            "default": "#7A5000",
             "description": "Token color: function parameters"
           }
         }

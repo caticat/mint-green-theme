@@ -63,31 +63,31 @@
     },
     {
       "scope": ["keyword", "storage", "storage.type"],
-      "settings": { "foreground": "#6A58DE" }
+      "settings": { "foreground": "#5533CC" }
     },
     {
       "scope": ["string"],
-      "settings": { "foreground": "#B86A3A" }
+      "settings": { "foreground": "#C05000" }
     },
     {
       "scope": ["constant.numeric"],
-      "settings": { "foreground": "#A04868" }
+      "settings": { "foreground": "#B0006B" }
     },
     {
       "scope": ["entity.name.function", "support.function"],
-      "settings": { "foreground": "#3A7A90" }
+      "settings": { "foreground": "#0070A0" }
     },
     {
       "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class", "entity.name.interface"],
-      "settings": { "foreground": "#7A58A0" }
+      "settings": { "foreground": "#7700AA" }
     },
     {
       "scope": ["variable", "variable.other"],
-      "settings": { "foreground": "#2E7D6A" }
+      "settings": { "foreground": "#006B5A" }
     },
     {
       "scope": ["variable.parameter"],
-      "settings": { "foreground": "#6A5A4A" }
+      "settings": { "foreground": "#7A5000" }
     }
   ]
 }
