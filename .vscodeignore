@@ -1,0 +1,10 @@
+.vscode/**
+src/**
+node_modules/**
+out/maps/**
+**/*.map
+tsconfig.json
+.vscodeignore
+publish.ps1
+docs/**
+.gitignore

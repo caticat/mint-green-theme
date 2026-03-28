@@ -1,0 +1,49 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Mint Green",
+  "type": "light",
+  "colors": {
+    "editor.background": "#CCE8CF",
+    "editorGutter.background": "#CCE8CF",
+    "editorLineNumber.foreground": "#2BA7BF",
+    "editorGroupHeader.tabsBackground": "#c1d3c1",
+    "tab.inactiveBackground": "#b1cab1",
+    "sideBar.background": "#BCD8BF",
+    "panel.background": "#D0F0D0",
+    "terminal.background": "#D0F0D0"
+  },
+  "tokenColors": [
+    {
+      "scope": ["comment"],
+      "settings": { "foreground": "#6A9955" }
+    },
+    {
+      "scope": ["string"],
+      "settings": { "foreground": "#A31515" }
+    },
+    {
+      "scope": ["keyword", "storage", "storage.type"],
+      "settings": { "foreground": "#0000FF" }
+    },
+    {
+      "scope": ["constant.numeric"],
+      "settings": { "foreground": "#098658" }
+    },
+    {
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#795E26" }
+    },
+    {
+      "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class"],
+      "settings": { "foreground": "#267F99" }
+    },
+    {
+      "scope": ["variable", "variable.other"],
+      "settings": { "foreground": "#001080" }
+    },
+    {
+      "scope": ["variable.parameter"],
+      "settings": { "foreground": "#383838" }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "mint-green-theme",
+  "displayName": "Mint Green Theme",
+  "description": "A mint green color theme with fully configurable colors and reset-to-default support.",
+  "version": "0.1.0",
+  "publisher": "panjie",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panjie/mint-green-theme"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Themes"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Mint Green",
+        "uiTheme": "vs",
+        "path": "./themes/mint-green-color-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "mint-green-theme.resetColors",
+        "title": "Mint Green Theme: Reset All Colors to Default"
+      }
+    ],
+    "configuration": {
+      "title": "Mint Green Theme",
+      "properties": {
+        "mintGreenTheme.editor.background": {
+          "type": "string",
+          "default": "#CCE8CF",
+          "description": "Editor background color"
+        },
+        "mintGreenTheme.editor.findMatchBackground": {
+          "type": "string",
+          "default": "#fbff0071",
+          "description": "Editor find match highlight background"
+        },
+        "mintGreenTheme.editor.findMatchHighlightBackground": {
+          "type": "string",
+          "default": "#00bfff69",
+          "description": "Editor find all matches highlight background"
+        },
+        "mintGreenTheme.editor.findRangeHighlightBackground": {
+          "type": "string",
+          "default": "#ff99006e",
+          "description": "Editor find range highlight background"
+        },
+        "mintGreenTheme.editor.selectionBackground": {
+          "type": "string",
+          "default": "#ff212190",
+          "description": "Editor selection background"
+        },
+        "mintGreenTheme.editor.selectionHighlightBackground": {
+          "type": "string",
+          "default": "#ff212150",
+          "description": "Editor selection highlight background"
+        },
+        "mintGreenTheme.editor.lineHighlightBackground": {
+          "type": "string",
+          "default": "#1100ff20",
+          "description": "Editor current line highlight background"
+        },
+        "mintGreenTheme.editorGutter.background": {
+          "type": "string",
+          "default": "#CCE8CF",
+          "description": "Editor gutter (line number area) background"
+        },
+        "mintGreenTheme.editorLineNumber.foreground": {
+          "type": "string",
+          "default": "#2BA7BF",
+          "description": "Editor line number foreground color"
+        },
+        "mintGreenTheme.editorGroupHeader.tabsBackground": {
+          "type": "string",
+          "default": "#c1d3c1",
+          "description": "Tab bar background color"
+        },
+        "mintGreenTheme.tab.inactiveBackground": {
+          "type": "string",
+          "default": "#b1cab1",
+          "description": "Inactive tab background color"
+        },
+        "mintGreenTheme.sideBar.background": {
+          "type": "string",
+          "default": "#BCD8BF",
+          "description": "Sidebar background color"
+        },
+        "mintGreenTheme.panel.background": {
+          "type": "string",
+          "default": "#D0F0D0",
+          "description": "Panel (terminal area) background color"
+        },
+        "mintGreenTheme.terminal.background": {
+          "type": "string",
+          "default": "#D0F0D0",
+          "description": "Integrated terminal background color"
+        },
+        "mintGreenTheme.token.comment": {
+          "type": "string",
+          "default": "#6A9955",
+          "description": "Token color: comments"
+        },
+        "mintGreenTheme.token.string": {
+          "type": "string",
+          "default": "#A31515",
+          "description": "Token color: strings"
+        },
+        "mintGreenTheme.token.keyword": {
+          "type": "string",
+          "default": "#0000FF",
+          "description": "Token color: keywords"
+        },
+        "mintGreenTheme.token.number": {
+          "type": "string",
+          "default": "#098658",
+          "description": "Token color: numbers"
+        },
+        "mintGreenTheme.token.function": {
+          "type": "string",
+          "default": "#795E26",
+          "description": "Token color: function names"
+        },
+        "mintGreenTheme.token.type": {
+          "type": "string",
+          "default": "#267F99",
+          "description": "Token color: types and classes"
+        },
+        "mintGreenTheme.token.variable": {
+          "type": "string",
+          "default": "#001080",
+          "description": "Token color: variables"
+        },
+        "mintGreenTheme.token.parameter": {
+          "type": "string",
+          "default": "#383838",
+          "description": "Token color: function parameters"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.7.1",
+    "typescript": "^6.0.2"
+  }
+}
