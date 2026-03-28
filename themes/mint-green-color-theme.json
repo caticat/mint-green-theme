@@ -61,17 +61,20 @@
     "string": "#C05000",
     "keyword": "#5533CC",
     "number": "#B0006B",
-    "function": "#0070A0",
-    "method": "#0070A0",
+    "function": "#0060C0",
+    "method": "#0060C0",
     "type": "#7700AA",
     "class": "#7700AA",
     "interface": "#7700AA",
     "struct": "#7700AA",
     "enum": "#7700AA",
     "typeParameter": "#7700AA",
+    "namespace": "#A0522D",
     "variable": "#006B5A",
     "property": "#006B5A",
-    "parameter": "#7A5000"
+    "parameter": "#7A5000",
+    "enumMember": "#B0006B",
+    "macro": "#B0006B"
   },
   "tokenColors": [
     {

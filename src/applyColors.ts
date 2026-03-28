@@ -42,6 +42,18 @@ export async function applyColors(): Promise<void> {
     }
   }
 
+  // Fixed semantic tokens not exposed as user config
+  // namespace (Go package names), enumMember, macro share colors with related tokens
+  const functionColor = mintConfig.get<string>('token.function');
+  const numberColor = mintConfig.get<string>('token.number');
+  if (functionColor) {
+    semanticTokenColors['namespace'] = '#A0522D'; // always distinct from function/variable
+  }
+  if (numberColor) {
+    semanticTokenColors['enumMember'] = numberColor;
+    semanticTokenColors['macro'] = numberColor;
+  }
+
   await config.update(
     'editor.tokenColorCustomizations',
     { textMateRules, semanticTokenColors },
