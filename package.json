@@ -146,7 +146,7 @@
           },
           "mintGreenTheme.tab.hoverBackground": {
             "type": "string",
-            "default": "#C4DFC4",
+            "default": "#BEDAD4",
             "description": "Tab hover background color"
           },
           "mintGreenTheme.tab.activeBorder": {
@@ -226,42 +226,42 @@
         "properties": {
           "mintGreenTheme.token.comment": {
             "type": "string",
-            "default": "#6A9955",
+            "default": "#7A9E7A",
             "description": "Token color: comments"
           },
           "mintGreenTheme.token.string": {
             "type": "string",
-            "default": "#A31515",
+            "default": "#D4845A",
             "description": "Token color: strings"
           },
           "mintGreenTheme.token.keyword": {
             "type": "string",
-            "default": "#0000FF",
+            "default": "#7B68EE",
             "description": "Token color: keywords"
           },
           "mintGreenTheme.token.number": {
             "type": "string",
-            "default": "#098658",
+            "default": "#C06080",
             "description": "Token color: numbers"
           },
           "mintGreenTheme.token.function": {
             "type": "string",
-            "default": "#795E26",
+            "default": "#4A90A4",
             "description": "Token color: function names"
           },
           "mintGreenTheme.token.type": {
             "type": "string",
-            "default": "#267F99",
+            "default": "#8A6BB0",
             "description": "Token color: types and classes"
           },
           "mintGreenTheme.token.variable": {
             "type": "string",
-            "default": "#001080",
+            "default": "#2E7D6A",
             "description": "Token color: variables"
           },
           "mintGreenTheme.token.parameter": {
             "type": "string",
-            "default": "#383838",
+            "default": "#7A6A5A",
             "description": "Token color: function parameters"
           }
         }
@@ -281,7 +281,7 @@
           },
           "mintGreenTheme.editorBracketMatch.background": {
             "type": "string",
-            "default": "#A8D8A850",
+            "default": "#B8E0C870",
             "description": "Matching bracket highlight background"
           },
           "mintGreenTheme.editorBracketMatch.border": {
@@ -326,7 +326,7 @@
           },
           "mintGreenTheme.activityBar.inactiveForeground": {
             "type": "string",
-            "default": "#4A7A4A",
+            "default": "#3A6A3A",
             "description": "Activity bar icon color (inactive)"
           },
           "mintGreenTheme.titleBar.activeForeground": {
@@ -376,17 +376,17 @@
         "properties": {
           "mintGreenTheme.gitDecoration.modifiedResourceForeground": {
             "type": "string",
-            "default": "#E65100",
+            "default": "#B8860B",
             "description": "File tree color for modified files"
           },
           "mintGreenTheme.gitDecoration.untrackedResourceForeground": {
             "type": "string",
-            "default": "#1565C0",
+            "default": "#2E8B57",
             "description": "File tree color for untracked files"
           },
           "mintGreenTheme.gitDecoration.deletedResourceForeground": {
             "type": "string",
-            "default": "#B71C1C",
+            "default": "#A0522D",
             "description": "File tree color for deleted files"
           }
         }
