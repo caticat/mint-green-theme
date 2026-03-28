@@ -85,13 +85,15 @@ export const TOKEN_COLOR_KEYS = [
 ] as const;
 
 // TOKEN_SCOPES: maps token config key -> TextMate scope(s)
+// Must stay in sync with themes/mint-green-color-theme.json tokenColors
+// Use parent scopes only — child scopes inherit automatically
 export const TOKEN_SCOPES: Record<string, string[]> = {
   'mintGreenTheme.token.comment': ['comment'],
   'mintGreenTheme.token.string': ['string'],
   'mintGreenTheme.token.keyword': ['keyword', 'storage', 'storage.type'],
   'mintGreenTheme.token.number': ['constant.numeric'],
   'mintGreenTheme.token.function': ['entity.name.function', 'support.function'],
-  'mintGreenTheme.token.type': ['entity.name.type', 'entity.name.class', 'support.type', 'support.class'],
+  'mintGreenTheme.token.type': ['entity.name.type', 'entity.name.class', 'support.type', 'support.class', 'entity.name.interface'],
   'mintGreenTheme.token.variable': ['variable', 'variable.other'],
   'mintGreenTheme.token.parameter': ['variable.parameter'],
 };

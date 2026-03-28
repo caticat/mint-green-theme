@@ -20,7 +20,7 @@
     "editorGroupHeader.tabsBackground": "#c1d3c1",
     "tab.activeBackground": "#CCE8CF",
     "tab.inactiveBackground": "#b1cab1",
-    "tab.hoverBackground": "#BEDAD4",
+    "tab.hoverBackground": "#BEE0BE",
     "tab.activeBorder": "#5A9A5A",
     "tab.unfocusedActiveBackground": "#C0DCC0",
     "titleBar.activeBackground": "#A8C8AB",
@@ -53,41 +53,41 @@
     "scrollbarSlider.background": "#A8C8AB80",
     "scrollbarSlider.hoverBackground": "#7AAD7EAA",
     "gitDecoration.modifiedResourceForeground": "#B8860B",
-    "gitDecoration.untrackedResourceForeground": "#2E8B57",
+    "gitDecoration.untrackedResourceForeground": "#1A7A4A",
     "gitDecoration.deletedResourceForeground": "#A0522D"
   },
   "tokenColors": [
     {
-      "scope": ["comment", "punctuation.definition.comment"],
-      "settings": { "foreground": "#7A9E7A", "fontStyle": "italic" }
+      "scope": ["comment"],
+      "settings": { "foreground": "#5A8A5A", "fontStyle": "italic" }
     },
     {
-      "scope": ["keyword", "storage", "storage.type", "keyword.control"],
-      "settings": { "foreground": "#7B68EE" }
+      "scope": ["keyword", "storage", "storage.type"],
+      "settings": { "foreground": "#6A58DE" }
     },
     {
-      "scope": ["string", "string.quoted", "string.template"],
-      "settings": { "foreground": "#D4845A" }
+      "scope": ["string"],
+      "settings": { "foreground": "#B86A3A" }
     },
     {
-      "scope": ["constant.numeric", "constant.language.numeric"],
-      "settings": { "foreground": "#C06080" }
+      "scope": ["constant.numeric"],
+      "settings": { "foreground": "#A04868" }
     },
     {
-      "scope": ["entity.name.function", "support.function", "meta.function-call"],
-      "settings": { "foreground": "#4A90A4" }
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#3A7A90" }
     },
     {
       "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class", "entity.name.interface"],
-      "settings": { "foreground": "#8A6BB0" }
+      "settings": { "foreground": "#7A58A0" }
     },
     {
-      "scope": ["variable", "variable.other", "variable.other.readwrite"],
+      "scope": ["variable", "variable.other"],
       "settings": { "foreground": "#2E7D6A" }
     },
     {
       "scope": ["variable.parameter"],
-      "settings": { "foreground": "#7A6A5A" }
+      "settings": { "foreground": "#6A5A4A" }
     }
   ]
 }
