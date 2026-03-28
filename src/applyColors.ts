@@ -47,7 +47,7 @@ export async function applyColors(): Promise<void> {
   const functionColor = mintConfig.get<string>('token.function');
   const numberColor = mintConfig.get<string>('token.number');
   if (functionColor) {
-    semanticTokenColors['namespace'] = '#A0522D'; // always distinct from function/variable
+    semanticTokenColors['namespace'] = '#8B0000'; // always distinct from function/variable
   }
   if (numberColor) {
     semanticTokenColors['enumMember'] = numberColor;

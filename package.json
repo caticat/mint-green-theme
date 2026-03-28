@@ -246,7 +246,7 @@
           },
           "mintGreenTheme.token.function": {
             "type": "string",
-            "default": "#0070A0",
+            "default": "#0055CC",
             "description": "Token color: function names"
           },
           "mintGreenTheme.token.type": {
@@ -256,7 +256,7 @@
           },
           "mintGreenTheme.token.variable": {
             "type": "string",
-            "default": "#006B5A",
+            "default": "#007055",
             "description": "Token color: variables"
           },
           "mintGreenTheme.token.parameter": {
