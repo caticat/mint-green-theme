@@ -9,6 +9,10 @@ export const UI_COLOR_KEYS: Record<string, string> = {
   'mintGreenTheme.editor.selectionBackground': 'editor.selectionBackground',
   'mintGreenTheme.editor.selectionHighlightBackground': 'editor.selectionHighlightBackground',
   'mintGreenTheme.editor.lineHighlightBackground': 'editor.lineHighlightBackground',
+  'mintGreenTheme.editor.wordHighlightBackground': 'editor.wordHighlightBackground',
+  'mintGreenTheme.editor.wordHighlightStrongBackground': 'editor.wordHighlightStrongBackground',
+  'mintGreenTheme.editorBracketMatch.background': 'editorBracketMatch.background',
+  'mintGreenTheme.editorBracketMatch.border': 'editorBracketMatch.border',
   'mintGreenTheme.editorGutter.background': 'editorGutter.background',
   'mintGreenTheme.editorLineNumber.foreground': 'editorLineNumber.foreground',
   'mintGreenTheme.editorWidget.background': 'editorWidget.background',
@@ -18,21 +22,37 @@ export const UI_COLOR_KEYS: Record<string, string> = {
   'mintGreenTheme.tab.activeBackground': 'tab.activeBackground',
   'mintGreenTheme.tab.inactiveBackground': 'tab.inactiveBackground',
   'mintGreenTheme.tab.activeBorder': 'tab.activeBorder',
+  'mintGreenTheme.tab.hoverBackground': 'tab.hoverBackground',
   // Side bar
   'mintGreenTheme.sideBar.background': 'sideBar.background',
+  'mintGreenTheme.sideBar.foreground': 'sideBar.foreground',
   'mintGreenTheme.sideBarSectionHeader.background': 'sideBarSectionHeader.background',
+  'mintGreenTheme.sideBarSectionHeader.foreground': 'sideBarSectionHeader.foreground',
   // Activity bar
   'mintGreenTheme.activityBar.background': 'activityBar.background',
+  'mintGreenTheme.activityBar.foreground': 'activityBar.foreground',
+  'mintGreenTheme.activityBar.inactiveForeground': 'activityBar.inactiveForeground',
+  'mintGreenTheme.activityBarBadge.background': 'activityBarBadge.background',
   // Title bar
   'mintGreenTheme.titleBar.activeBackground': 'titleBar.activeBackground',
+  'mintGreenTheme.titleBar.activeForeground': 'titleBar.activeForeground',
+  'mintGreenTheme.titleBar.inactiveBackground': 'titleBar.inactiveBackground',
   // Status bar
   'mintGreenTheme.statusBar.background': 'statusBar.background',
+  'mintGreenTheme.statusBar.foreground': 'statusBar.foreground',
+  'mintGreenTheme.statusBar.debuggingBackground': 'statusBar.debuggingBackground',
+  'mintGreenTheme.statusBar.noFolderBackground': 'statusBar.noFolderBackground',
   // Panel & terminal
   'mintGreenTheme.panel.background': 'panel.background',
   'mintGreenTheme.terminal.background': 'terminal.background',
   // Input & dropdown
   'mintGreenTheme.input.background': 'input.background',
+  'mintGreenTheme.input.border': 'input.border',
   'mintGreenTheme.dropdown.background': 'dropdown.background',
+  'mintGreenTheme.focusBorder': 'focusBorder',
+  'mintGreenTheme.button.background': 'button.background',
+  'mintGreenTheme.badge.background': 'badge.background',
+  'mintGreenTheme.notifications.background': 'notifications.background',
   // List & tree
   'mintGreenTheme.list.hoverBackground': 'list.hoverBackground',
   'mintGreenTheme.list.activeSelectionBackground': 'list.activeSelectionBackground',
@@ -40,6 +60,16 @@ export const UI_COLOR_KEYS: Record<string, string> = {
   // Scrollbar
   'mintGreenTheme.scrollbarSlider.background': 'scrollbarSlider.background',
   'mintGreenTheme.scrollbarSlider.hoverBackground': 'scrollbarSlider.hoverBackground',
+  // Advanced: Editor
+  'mintGreenTheme.editorCursor.foreground': 'editorCursor.foreground',
+  'mintGreenTheme.editorIndentGuide.background1': 'editorIndentGuide.background1',
+  'mintGreenTheme.editorRuler.foreground': 'editorRuler.foreground',
+  'mintGreenTheme.editorWhitespace.foreground': 'editorWhitespace.foreground',
+  'mintGreenTheme.tab.unfocusedActiveBackground': 'tab.unfocusedActiveBackground',
+  // Advanced: Git Decorations
+  'mintGreenTheme.gitDecoration.modifiedResourceForeground': 'gitDecoration.modifiedResourceForeground',
+  'mintGreenTheme.gitDecoration.untrackedResourceForeground': 'gitDecoration.untrackedResourceForeground',
+  'mintGreenTheme.gitDecoration.deletedResourceForeground': 'gitDecoration.deletedResourceForeground',
 };
 
 // TOKEN_COLOR_KEYS: all token config keys

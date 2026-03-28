@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/caticat/mint-green-theme"
   },
+  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -57,6 +58,26 @@
             "type": "string",
             "default": "#ff212150",
             "description": "Editor selection highlight background"
+          },
+          "mintGreenTheme.editor.wordHighlightBackground": {
+            "type": "string",
+            "default": "#C8E8C880",
+            "description": "Editor word highlight background (read access)"
+          },
+          "mintGreenTheme.editor.wordHighlightStrongBackground": {
+            "type": "string",
+            "default": "#A8D8A880",
+            "description": "Editor word highlight background (write access)"
+          },
+          "mintGreenTheme.editorBracketMatch.background": {
+            "type": "string",
+            "default": "#A8D8A850",
+            "description": "Matching bracket highlight background"
+          },
+          "mintGreenTheme.editorBracketMatch.border": {
+            "type": "string",
+            "default": "#5A9A5A",
+            "description": "Matching bracket highlight border"
           },
           "mintGreenTheme.editor.findMatchBackground": {
             "type": "string",
@@ -108,10 +129,25 @@
             "default": "#A8C8AB",
             "description": "Activity bar background (leftmost icon bar)"
           },
+          "mintGreenTheme.activityBar.foreground": {
+            "type": "string",
+            "default": "#1A3A1A",
+            "description": "Activity bar icon color (active)"
+          },
+          "mintGreenTheme.activityBarBadge.background": {
+            "type": "string",
+            "default": "#2E7D32",
+            "description": "Activity bar badge background (e.g. git change count)"
+          },
           "mintGreenTheme.statusBar.background": {
             "type": "string",
             "default": "#7AAD7E",
             "description": "Status bar background (bottom bar)"
+          },
+          "mintGreenTheme.statusBar.foreground": {
+            "type": "string",
+            "default": "#F0FFF0",
+            "description": "Status bar foreground text color"
           },
           "mintGreenTheme.editorGroupHeader.tabsBackground": {
             "type": "string",
@@ -128,6 +164,11 @@
             "default": "#b1cab1",
             "description": "Inactive tab background color"
           },
+          "mintGreenTheme.tab.hoverBackground": {
+            "type": "string",
+            "default": "#BCD8BC",
+            "description": "Tab hover background color"
+          },
           "mintGreenTheme.tab.activeBorder": {
             "type": "string",
             "default": "#5A9A5A",
@@ -137,6 +178,11 @@
             "type": "string",
             "default": "#BCD8BF",
             "description": "Sidebar background color"
+          },
+          "mintGreenTheme.sideBar.foreground": {
+            "type": "string",
+            "default": "#1A3A1A",
+            "description": "Sidebar foreground text color"
           },
           "mintGreenTheme.sideBarSectionHeader.background": {
             "type": "string",
@@ -152,6 +198,11 @@
             "type": "string",
             "default": "#D0F0D0",
             "description": "Integrated terminal background color"
+          },
+          "mintGreenTheme.focusBorder": {
+            "type": "string",
+            "default": "#5A9A5A",
+            "description": "Global focus border color (input focus outline, etc.)"
           },
           "mintGreenTheme.input.background": {
             "type": "string",
@@ -232,6 +283,111 @@
             "type": "string",
             "default": "#383838",
             "description": "Token color: function parameters"
+          }
+        }
+      },
+      {
+        "title": "Advanced: Editor",
+        "properties": {
+          "mintGreenTheme.editorCursor.foreground": {
+            "type": "string",
+            "default": "#2E7D32",
+            "description": "Editor cursor color"
+          },
+          "mintGreenTheme.editorIndentGuide.background1": {
+            "type": "string",
+            "default": "#B0D0B080",
+            "description": "Editor indent guide line color"
+          },
+          "mintGreenTheme.editorRuler.foreground": {
+            "type": "string",
+            "default": "#A0C0A060",
+            "description": "Editor ruler line color (80/120 col guides)"
+          },
+          "mintGreenTheme.editorWhitespace.foreground": {
+            "type": "string",
+            "default": "#B0D0B0",
+            "description": "Whitespace character color (spaces, tabs when visible)"
+          },
+          "mintGreenTheme.tab.unfocusedActiveBackground": {
+            "type": "string",
+            "default": "#C0DCC0",
+            "description": "Active tab background when window is unfocused"
+          },
+          "mintGreenTheme.input.border": {
+            "type": "string",
+            "default": "#A8C8AB",
+            "description": "Input box border color"
+          }
+        }
+      },
+      {
+        "title": "Advanced: UI Elements",
+        "properties": {
+          "mintGreenTheme.activityBar.inactiveForeground": {
+            "type": "string",
+            "default": "#4A7A4A",
+            "description": "Activity bar icon color (inactive)"
+          },
+          "mintGreenTheme.titleBar.activeForeground": {
+            "type": "string",
+            "default": "#1A3A1A",
+            "description": "Title bar foreground text color"
+          },
+          "mintGreenTheme.titleBar.inactiveBackground": {
+            "type": "string",
+            "default": "#B8D4BB",
+            "description": "Title bar background when window is unfocused"
+          },
+          "mintGreenTheme.sideBarSectionHeader.foreground": {
+            "type": "string",
+            "default": "#1A3A1A",
+            "description": "Sidebar section header foreground text color"
+          },
+          "mintGreenTheme.statusBar.debuggingBackground": {
+            "type": "string",
+            "default": "#5A8A5A",
+            "description": "Status bar background while debugging"
+          },
+          "mintGreenTheme.statusBar.noFolderBackground": {
+            "type": "string",
+            "default": "#8AB88E",
+            "description": "Status bar background when no folder is open"
+          },
+          "mintGreenTheme.button.background": {
+            "type": "string",
+            "default": "#5A9A5A",
+            "description": "Primary button background color"
+          },
+          "mintGreenTheme.badge.background": {
+            "type": "string",
+            "default": "#2E7D32",
+            "description": "Badge background (extension count, etc.)"
+          },
+          "mintGreenTheme.notifications.background": {
+            "type": "string",
+            "default": "#E0F0E0",
+            "description": "Notification popup background (bottom-right)"
+          }
+        }
+      },
+      {
+        "title": "Advanced: Git Decorations",
+        "properties": {
+          "mintGreenTheme.gitDecoration.modifiedResourceForeground": {
+            "type": "string",
+            "default": "#2E7D32",
+            "description": "File tree color for modified files"
+          },
+          "mintGreenTheme.gitDecoration.untrackedResourceForeground": {
+            "type": "string",
+            "default": "#1565C0",
+            "description": "File tree color for untracked files"
+          },
+          "mintGreenTheme.gitDecoration.deletedResourceForeground": {
+            "type": "string",
+            "default": "#B71C1C",
+            "description": "File tree color for deleted files"
           }
         }
       }
