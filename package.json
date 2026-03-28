@@ -38,6 +38,11 @@
             "default": "#CCE8CF",
             "description": "Editor background color"
           },
+          "mintGreenTheme.editor.foreground": {
+            "type": "string",
+            "default": "#1E1E1E",
+            "description": "Editor default text color"
+          },
           "mintGreenTheme.editor.lineHighlightBackground": {
             "type": "string",
             "default": "#1100ff20",
@@ -77,26 +82,66 @@
             "type": "string",
             "default": "#2BA7BF",
             "description": "Editor line number foreground color"
+          },
+          "mintGreenTheme.editorWidget.background": {
+            "type": "string",
+            "default": "#E0F0E0",
+            "description": "Editor widget background (autocomplete, hover docs, find widget)"
+          },
+          "mintGreenTheme.breadcrumb.background": {
+            "type": "string",
+            "default": "#CCE8CF",
+            "description": "Breadcrumb navigation bar background"
           }
         }
       },
       {
         "title": "UI Colors",
         "properties": {
+          "mintGreenTheme.titleBar.activeBackground": {
+            "type": "string",
+            "default": "#A8C8AB",
+            "description": "Window title bar background"
+          },
+          "mintGreenTheme.activityBar.background": {
+            "type": "string",
+            "default": "#A8C8AB",
+            "description": "Activity bar background (leftmost icon bar)"
+          },
+          "mintGreenTheme.statusBar.background": {
+            "type": "string",
+            "default": "#7AAD7E",
+            "description": "Status bar background (bottom bar)"
+          },
           "mintGreenTheme.editorGroupHeader.tabsBackground": {
             "type": "string",
             "default": "#c1d3c1",
             "description": "Tab bar background color"
+          },
+          "mintGreenTheme.tab.activeBackground": {
+            "type": "string",
+            "default": "#CCE8CF",
+            "description": "Active tab background color"
           },
           "mintGreenTheme.tab.inactiveBackground": {
             "type": "string",
             "default": "#b1cab1",
             "description": "Inactive tab background color"
           },
+          "mintGreenTheme.tab.activeBorder": {
+            "type": "string",
+            "default": "#4CAF50",
+            "description": "Active tab bottom border highlight"
+          },
           "mintGreenTheme.sideBar.background": {
             "type": "string",
             "default": "#BCD8BF",
             "description": "Sidebar background color"
+          },
+          "mintGreenTheme.sideBarSectionHeader.background": {
+            "type": "string",
+            "default": "#AECFB1",
+            "description": "Sidebar section header background (EXPLORER, GIT, etc.)"
           },
           "mintGreenTheme.panel.background": {
             "type": "string",
@@ -107,6 +152,41 @@
             "type": "string",
             "default": "#D0F0D0",
             "description": "Integrated terminal background color"
+          },
+          "mintGreenTheme.input.background": {
+            "type": "string",
+            "default": "#E8F5E9",
+            "description": "Input box background (search, replace, find bar, etc.)"
+          },
+          "mintGreenTheme.dropdown.background": {
+            "type": "string",
+            "default": "#E8F5E9",
+            "description": "Dropdown / combobox background (terminal profile selector, etc.)"
+          },
+          "mintGreenTheme.list.hoverBackground": {
+            "type": "string",
+            "default": "#B8DDB8",
+            "description": "List / file tree item hover background"
+          },
+          "mintGreenTheme.list.activeSelectionBackground": {
+            "type": "string",
+            "default": "#A0CCA0",
+            "description": "List / file tree active selection background"
+          },
+          "mintGreenTheme.list.inactiveSelectionBackground": {
+            "type": "string",
+            "default": "#B8DDB8",
+            "description": "List / file tree inactive selection background"
+          },
+          "mintGreenTheme.scrollbarSlider.background": {
+            "type": "string",
+            "default": "#A8C8AB80",
+            "description": "Scrollbar slider background"
+          },
+          "mintGreenTheme.scrollbarSlider.hoverBackground": {
+            "type": "string",
+            "default": "#7AAD7EAA",
+            "description": "Scrollbar slider hover background"
           }
         }
       },

@@ -4,13 +4,29 @@
   "type": "light",
   "colors": {
     "editor.background": "#CCE8CF",
+    "editor.foreground": "#1E1E1E",
     "editorGutter.background": "#CCE8CF",
     "editorLineNumber.foreground": "#2BA7BF",
+    "editorWidget.background": "#E0F0E0",
+    "breadcrumb.background": "#CCE8CF",
     "editorGroupHeader.tabsBackground": "#c1d3c1",
+    "tab.activeBackground": "#CCE8CF",
     "tab.inactiveBackground": "#b1cab1",
+    "tab.activeBorder": "#4CAF50",
+    "titleBar.activeBackground": "#A8C8AB",
+    "activityBar.background": "#A8C8AB",
+    "statusBar.background": "#7AAD7E",
     "sideBar.background": "#BCD8BF",
+    "sideBarSectionHeader.background": "#AECFB1",
     "panel.background": "#D0F0D0",
-    "terminal.background": "#D0F0D0"
+    "terminal.background": "#D0F0D0",
+    "input.background": "#E8F5E9",
+    "dropdown.background": "#E8F5E9",
+    "list.hoverBackground": "#B8DDB8",
+    "list.activeSelectionBackground": "#A0CCA0",
+    "list.inactiveSelectionBackground": "#B8DDB8",
+    "scrollbarSlider.background": "#A8C8AB80",
+    "scrollbarSlider.hoverBackground": "#7AAD7EAA"
   },
   "tokenColors": [
     {
