@@ -59,26 +59,6 @@
             "default": "#ff212150",
             "description": "Editor selection highlight background"
           },
-          "mintGreenTheme.editor.wordHighlightBackground": {
-            "type": "string",
-            "default": "#C8E8C880",
-            "description": "Editor word highlight background (read access)"
-          },
-          "mintGreenTheme.editor.wordHighlightStrongBackground": {
-            "type": "string",
-            "default": "#A8D8A880",
-            "description": "Editor word highlight background (write access)"
-          },
-          "mintGreenTheme.editorBracketMatch.background": {
-            "type": "string",
-            "default": "#A8D8A850",
-            "description": "Matching bracket highlight background"
-          },
-          "mintGreenTheme.editorBracketMatch.border": {
-            "type": "string",
-            "default": "#5A9A5A",
-            "description": "Matching bracket highlight border"
-          },
           "mintGreenTheme.editor.findMatchBackground": {
             "type": "string",
             "default": "#fbff0071",
@@ -166,7 +146,7 @@
           },
           "mintGreenTheme.tab.hoverBackground": {
             "type": "string",
-            "default": "#BCD8BC",
+            "default": "#C4DFC4",
             "description": "Tab hover background color"
           },
           "mintGreenTheme.tab.activeBorder": {
@@ -289,6 +269,26 @@
       {
         "title": "Advanced: Editor",
         "properties": {
+          "mintGreenTheme.editor.wordHighlightBackground": {
+            "type": "string",
+            "default": "#B0D4FF80",
+            "description": "Word highlight background when cursor is on a symbol (read access)"
+          },
+          "mintGreenTheme.editor.wordHighlightStrongBackground": {
+            "type": "string",
+            "default": "#FFD70080",
+            "description": "Word highlight background for write access positions"
+          },
+          "mintGreenTheme.editorBracketMatch.background": {
+            "type": "string",
+            "default": "#A8D8A850",
+            "description": "Matching bracket highlight background"
+          },
+          "mintGreenTheme.editorBracketMatch.border": {
+            "type": "string",
+            "default": "#5A9A5A",
+            "description": "Matching bracket highlight border"
+          },
           "mintGreenTheme.editorCursor.foreground": {
             "type": "string",
             "default": "#2E7D32",
@@ -308,7 +308,12 @@
             "type": "string",
             "default": "#B0D0B0",
             "description": "Whitespace character color (spaces, tabs when visible)"
-          },
+          }
+        }
+      },
+      {
+        "title": "Advanced: UI Elements",
+        "properties": {
           "mintGreenTheme.tab.unfocusedActiveBackground": {
             "type": "string",
             "default": "#C0DCC0",
@@ -318,12 +323,7 @@
             "type": "string",
             "default": "#A8C8AB",
             "description": "Input box border color"
-          }
-        }
-      },
-      {
-        "title": "Advanced: UI Elements",
-        "properties": {
+          },
           "mintGreenTheme.activityBar.inactiveForeground": {
             "type": "string",
             "default": "#4A7A4A",
@@ -376,7 +376,7 @@
         "properties": {
           "mintGreenTheme.gitDecoration.modifiedResourceForeground": {
             "type": "string",
-            "default": "#2E7D32",
+            "default": "#E65100",
             "description": "File tree color for modified files"
           },
           "mintGreenTheme.gitDecoration.untrackedResourceForeground": {
