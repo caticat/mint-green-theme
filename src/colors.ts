@@ -97,3 +97,16 @@ export const TOKEN_SCOPES: Record<string, string[]> = {
   'mintGreenTheme.token.variable': ['variable', 'variable.other'],
   'mintGreenTheme.token.parameter': ['variable.parameter'],
 };
+
+// SEMANTIC_TOKEN_KEYS: maps token config key -> semantic token type(s)
+// Covers gopls and other LSP semantic highlighting (overrides TextMate)
+export const SEMANTIC_TOKEN_KEYS: Record<string, string[]> = {
+  'mintGreenTheme.token.comment': ['comment'],
+  'mintGreenTheme.token.string': ['string'],
+  'mintGreenTheme.token.keyword': ['keyword'],
+  'mintGreenTheme.token.number': ['number'],
+  'mintGreenTheme.token.function': ['function', 'method'],
+  'mintGreenTheme.token.type': ['type', 'class', 'interface', 'struct', 'enum', 'typeParameter'],
+  'mintGreenTheme.token.variable': ['variable', 'property'],
+  'mintGreenTheme.token.parameter': ['parameter'],
+};

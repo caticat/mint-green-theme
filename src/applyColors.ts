@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { UI_COLOR_KEYS, TOKEN_COLOR_KEYS, TOKEN_SCOPES } from './colors';
+import { UI_COLOR_KEYS, TOKEN_COLOR_KEYS, TOKEN_SCOPES, SEMANTIC_TOKEN_KEYS } from './colors';
 
 // Read mintGreenTheme.* config and apply to workbench.colorCustomizations
-// and editor.tokenColorCustomizations
+// and editor.tokenColorCustomizations (both TextMate and semantic)
 export async function applyColors(): Promise<void> {
   const config = vscode.workspace.getConfiguration();
   const mintConfig = vscode.workspace.getConfiguration('mintGreenTheme');
@@ -23,22 +23,28 @@ export async function applyColors(): Promise<void> {
     vscode.ConfigurationTarget.Global
   );
 
-  // Build token color overrides
-  const tokenRules: Array<{ scope: string[]; settings: { foreground: string } }> = [];
+  // Build TextMate token color rules
+  const textMateRules: Array<{ scope: string[]; settings: { foreground: string } }> = [];
+  // Build semantic token colors
+  const semanticTokenColors: Record<string, string> = {};
+
   for (const configKey of TOKEN_COLOR_KEYS) {
     const subKey = configKey.replace('mintGreenTheme.', '');
     const color = mintConfig.get<string>(subKey);
     if (color) {
-      tokenRules.push({
+      textMateRules.push({
         scope: TOKEN_SCOPES[configKey],
         settings: { foreground: color },
       });
+      for (const semanticType of SEMANTIC_TOKEN_KEYS[configKey]) {
+        semanticTokenColors[semanticType] = color;
+      }
     }
   }
 
   await config.update(
     'editor.tokenColorCustomizations',
-    { textMateRules: tokenRules },
+    { textMateRules, semanticTokenColors },
     vscode.ConfigurationTarget.Global
   );
 }

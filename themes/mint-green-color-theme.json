@@ -56,6 +56,23 @@
     "gitDecoration.untrackedResourceForeground": "#1A7A4A",
     "gitDecoration.deletedResourceForeground": "#A0522D"
   },
+  "semanticTokenColors": {
+    "comment": "#5A8A5A",
+    "string": "#C05000",
+    "keyword": "#5533CC",
+    "number": "#B0006B",
+    "function": "#0070A0",
+    "method": "#0070A0",
+    "type": "#7700AA",
+    "class": "#7700AA",
+    "interface": "#7700AA",
+    "struct": "#7700AA",
+    "enum": "#7700AA",
+    "typeParameter": "#7700AA",
+    "variable": "#006B5A",
+    "property": "#006B5A",
+    "parameter": "#7A5000"
+  },
   "tokenColors": [
     {
       "scope": ["comment"],
