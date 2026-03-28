@@ -130,7 +130,7 @@
           },
           "mintGreenTheme.tab.activeBorder": {
             "type": "string",
-            "default": "#4CAF50",
+            "default": "#5A9A5A",
             "description": "Active tab bottom border highlight"
           },
           "mintGreenTheme.sideBar.background": {
@@ -140,7 +140,7 @@
           },
           "mintGreenTheme.sideBarSectionHeader.background": {
             "type": "string",
-            "default": "#AECFB1",
+            "default": "#A8C8AB",
             "description": "Sidebar section header background (EXPLORER, GIT, etc.)"
           },
           "mintGreenTheme.panel.background": {
@@ -175,7 +175,7 @@
           },
           "mintGreenTheme.list.inactiveSelectionBackground": {
             "type": "string",
-            "default": "#B8DDB8",
+            "default": "#AACFAA",
             "description": "List / file tree inactive selection background"
           },
           "mintGreenTheme.scrollbarSlider.background": {
