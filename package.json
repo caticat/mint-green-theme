@@ -3,11 +3,11 @@
   "displayName": "Mint Green Theme",
   "description": "A mint green color theme with fully configurable colors and reset-to-default support.",
   "version": "0.1.0",
-  "publisher": "panjie",
+  "publisher": "panjie039",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panjie/mint-green-theme"
+    "url": "https://github.com/caticat/mint-green-theme"
   },
   "engines": {
     "vscode": "^1.85.0"
