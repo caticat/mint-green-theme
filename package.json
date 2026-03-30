@@ -226,7 +226,7 @@
         "properties": {
           "mintGreenTheme.token.comment": {
             "type": "string",
-            "default": "#5A8A5A",
+            "default": "#4A7A4A",
             "description": "Token color: comments"
           },
           "mintGreenTheme.token.string": {
@@ -251,7 +251,7 @@
           },
           "mintGreenTheme.token.type": {
             "type": "string",
-            "default": "#7700AA",
+            "default": "#8800BB",
             "description": "Token color: types and classes"
           },
           "mintGreenTheme.token.variable": {
@@ -261,7 +261,7 @@
           },
           "mintGreenTheme.token.parameter": {
             "type": "string",
-            "default": "#7A5000",
+            "default": "#8B4513",
             "description": "Token color: function parameters"
           }
         }

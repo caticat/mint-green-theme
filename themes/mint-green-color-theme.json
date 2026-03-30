@@ -58,29 +58,29 @@
     "gitDecoration.deletedResourceForeground": "#A0522D"
   },
   "semanticTokenColors": {
-    "comment": "#5A8A5A",
+    "comment": "#4A7A4A",
     "string": "#C05000",
     "keyword": "#5533CC",
     "number": "#B0006B",
     "function": "#0055CC",
     "method": "#0055CC",
-    "type": "#7700AA",
-    "class": "#7700AA",
-    "interface": "#7700AA",
-    "struct": "#7700AA",
-    "enum": "#7700AA",
-    "typeParameter": "#7700AA",
+    "type": "#8800BB",
+    "class": "#8800BB",
+    "interface": "#8800BB",
+    "struct": "#8800BB",
+    "enum": "#8800BB",
+    "typeParameter": "#8800BB",
     "namespace": "#CC3300",
     "variable": "#007055",
     "property": "#007055",
-    "parameter": "#7A5000",
+    "parameter": "#8B4513",
     "enumMember": "#B0006B",
     "macro": "#B0006B"
   },
   "tokenColors": [
     {
       "scope": ["comment"],
-      "settings": { "foreground": "#5A8A5A", "fontStyle": "italic" }
+      "settings": { "foreground": "#4A7A4A", "fontStyle": "italic" }
     },
     {
       "scope": ["keyword", "storage"],
@@ -100,7 +100,7 @@
     },
     {
       "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class", "entity.name.interface", "storage.type"],
-      "settings": { "foreground": "#7700AA" }
+      "settings": { "foreground": "#8800BB" }
     },
     {
       "scope": ["variable.other.constant.go"],
@@ -116,7 +116,7 @@
     },
     {
       "scope": ["variable.parameter"],
-      "settings": { "foreground": "#7A5000" }
+      "settings": { "foreground": "#8B4513" }
     }
   ]
 }
