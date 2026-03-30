@@ -107,12 +107,8 @@
       "settings": { "foreground": "#B0006B" }
     },
     {
-      "scope": ["variable.other.property.go"],
-      "settings": { "foreground": "#2E86C1" }
-    },
-    {
       "scope": ["variable.other.go"],
-      "settings": { "foreground": "#CC3300" }
+      "settings": { "foreground": "#007055" }
     },
     {
       "scope": ["variable", "variable.other"],
