@@ -69,7 +69,7 @@
     "struct": "#7700AA",
     "enum": "#7700AA",
     "typeParameter": "#7700AA",
-    "namespace": "#8B0000",
+    "namespace": "#CC3300",
     "variable": "#007055",
     "property": "#007055",
     "parameter": "#7A5000",
@@ -82,7 +82,7 @@
       "settings": { "foreground": "#5A8A5A", "fontStyle": "italic" }
     },
     {
-      "scope": ["keyword", "storage", "storage.type"],
+      "scope": ["keyword", "storage"],
       "settings": { "foreground": "#5533CC" }
     },
     {
@@ -98,7 +98,7 @@
       "settings": { "foreground": "#0055CC" }
     },
     {
-      "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class", "entity.name.interface"],
+      "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class", "entity.name.interface", "storage.type"],
       "settings": { "foreground": "#7700AA" }
     },
     {

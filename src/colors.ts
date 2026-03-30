@@ -90,10 +90,10 @@ export const TOKEN_COLOR_KEYS = [
 export const TOKEN_SCOPES: Record<string, string[]> = {
   'mintGreenTheme.token.comment': ['comment'],
   'mintGreenTheme.token.string': ['string'],
-  'mintGreenTheme.token.keyword': ['keyword', 'storage', 'storage.type'],
+  'mintGreenTheme.token.keyword': ['keyword', 'storage'],
   'mintGreenTheme.token.number': ['constant.numeric'],
   'mintGreenTheme.token.function': ['entity.name.function', 'support.function'],
-  'mintGreenTheme.token.type': ['entity.name.type', 'entity.name.class', 'support.type', 'support.class', 'entity.name.interface'],
+  'mintGreenTheme.token.type': ['entity.name.type', 'entity.name.class', 'support.type', 'support.class', 'entity.name.interface', 'storage.type'],
   'mintGreenTheme.token.variable': ['variable', 'variable.other'],
   'mintGreenTheme.token.parameter': ['variable.parameter'],
 };
