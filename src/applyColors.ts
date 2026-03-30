@@ -48,11 +48,12 @@ export async function applyColors(): Promise<void> {
   const numberColor = mintConfig.get<string>('token.number');
   if (functionColor) {
     semanticTokenColors['namespace'] = '#CC3300';
-    // Go package names use variable.other.go TextMate scope, not semantic namespace
-    textMateRules.unshift({
-      scope: ['variable.other.go'],
-      settings: { foreground: '#CC3300' },
-    });
+    // Go-specific TextMate scopes (gopls does not emit semantic tokens for these)
+    textMateRules.unshift(
+      { scope: ['variable.other.constant.go'], settings: { foreground: '#B0006B' } },
+      { scope: ['variable.other.property.go'], settings: { foreground: '#2E86C1' } },
+      { scope: ['variable.other.go'],          settings: { foreground: '#CC3300' } },
+    );
   }
   if (numberColor) {
     semanticTokenColors['enumMember'] = numberColor;
