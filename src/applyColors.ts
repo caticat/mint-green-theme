@@ -47,7 +47,12 @@ export async function applyColors(): Promise<void> {
   const functionColor = mintConfig.get<string>('token.function');
   const numberColor = mintConfig.get<string>('token.number');
   if (functionColor) {
-    semanticTokenColors['namespace'] = '#CC3300'; // always distinct from function/variable
+    semanticTokenColors['namespace'] = '#CC3300';
+    // Go package names use variable.other.go TextMate scope, not semantic namespace
+    textMateRules.unshift({
+      scope: ['variable.other.go'],
+      settings: { foreground: '#CC3300' },
+    });
   }
   if (numberColor) {
     semanticTokenColors['enumMember'] = numberColor;
