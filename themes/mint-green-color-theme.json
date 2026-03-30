@@ -2,6 +2,7 @@
   "$schema": "vscode://schemas/color-theme",
   "name": "Mint Green",
   "type": "light",
+  "semanticHighlighting": true,
   "colors": {
     "editor.background": "#CCE8CF",
     "editor.foreground": "#1E1E1E",
