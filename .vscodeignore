@@ -6,6 +6,7 @@ out/maps/**
 **/*.map
 tsconfig.json
 .vscodeignore
+.markdownlint.json
 publish.ps1
 docs/**
 .gitignore

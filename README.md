@@ -6,6 +6,8 @@ A Visual Studio Code color theme based on mint green (`#CCE8CF`). Every color is
 
 - Main editor background: `#CCE8CF` (mint green)
 - All UI areas use harmonious color offsets — sidebar, terminal, tabs, title bar, status bar, activity bar
+- Carefully tuned syntax token colors with distinct hues for easy type recognition
+- Full semantic highlighting support (Go/gopls and other LSP languages)
 - **Every color is configurable** via VS Code Settings (`mintGreenTheme.*`)
 - **One command to reset all colors to default**: `Mint Green Theme: Reset All Colors to Default`
 
@@ -31,18 +33,44 @@ Open Settings (`Ctrl+,`) and search for `mintGreenTheme`. All colors are grouped
 
 ### Reset to Default
 
-Run the command `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`Ctrl+Shift+P`) to restore all colors to the theme's built-in defaults.
+Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`Ctrl+Shift+P`).
 
-## Key Color Reference
+## Syntax Color Reference
+
+| Token | Color | Example |
+| ----- | ----- | ------- |
+| Comment | `#4A7A4A` gray-green italic | `// note` |
+| Keyword | `#5533CC` indigo | `func`, `if`, `for` |
+| Type / Struct | `#8800BB` red-purple | `int32`, `Player` |
+| String | `#C05000` deep orange | `"hello"` |
+| Number / Constant | `#B0006B` deep rose | `0`, `MaxCount` |
+| Function / Method | `#0055CC` deep blue | `BizErr()`, `Init()` |
+| Variable | `#007055` deep teal | `ctx`, `rankId` |
+| Parameter | `#8B4513` saddle brown | `p`, `te` |
+
+## UI Color Reference
 
 | Area | Color |
-|------|-------|
+| ---- | ----- |
 | Editor background | `#CCE8CF` |
 | Sidebar | `#BCD8BF` |
 | Terminal / Panel | `#D0F0D0` |
 | Activity bar / Title bar | `#A8C8AB` |
 | Status bar | `#7AAD7E` |
 | Input / Dropdown | `#E8F5E9` |
+
+## Changelog
+
+### v0.1.1
+
+- Add semantic highlighting support (`"semanticHighlighting": true`) — fixes Go/gopls token colors
+- Improve syntax token contrast: deepen comment, shift type to red-purple, darken parameter
+- Fix tab hover color hue, git decoration contrast
+- Sync TextMate and semantic token scopes
+
+### v0.1.0
+
+- Initial release
 
 ## License
 
@@ -52,12 +80,14 @@ MIT
 
 # Mint Green Theme（中文说明）
 
-一款基于薄荷绿（`#CCE8CF`）的 Visual Studio Code 颜色主题。所有颜色均可自由配置，并支持一键恢复默认值。
+一款基于薄荷绿（`#CCE8CF`）的 Visual Studio Code 颜色主题，支持所有颜色的独立配置，并可一键恢复默认值。
 
 ## 特点
 
 - 主编辑区背景色：`#CCE8CF`（绿豆沙/薄荷绿）
 - 侧边栏、终端、标签栏、标题栏、状态栏、活动栏等区域均使用与主色调相近的颜色，整体协调
+- 代码语法颜色采用不同色相，类型、函数、变量、关键字等一目了然
+- 支持语义高亮（Go/gopls 及其他 LSP 语言）
 - **所有颜色均可通过 VSCode 设置项自定义**（搜索 `mintGreenTheme`）
 - **支持一键恢复所有颜色为默认值**：`Mint Green Theme: Reset All Colors to Default`
 
@@ -83,7 +113,20 @@ MIT
 
 ### 恢复默认颜色
 
-命令面板（`Ctrl+Shift+P`）→ 运行 `Mint Green Theme: Reset All Colors to Default`，即可将所有颜色恢复为主题内置的默认值。
+命令面板（`Ctrl+Shift+P`）→ 运行 `Mint Green Theme: Reset All Colors to Default`。
+
+## 更新日志
+
+### v0.1.1
+
+- 添加语义高亮声明（`"semanticHighlighting": true`），修复 Go/gopls token 颜色不生效问题
+- 优化语法颜色对比度：加深注释色、类型色调整为红紫、参数色加深
+- 修复标签悬停色调、git 装饰色对比度
+- 同步 TextMate 与语义 token 的 scope 覆盖范围
+
+### v0.1.0
+
+- 初始版本发布
 
 ## 许可证
 
