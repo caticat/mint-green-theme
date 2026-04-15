@@ -61,6 +61,16 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 
 ## Changelog
 
+### v0.2.0
+
+- Fix: extension no longer writes to User Settings — uninstalling leaves no
+  trace in `settings.json`
+  (fixes [#1](https://github.com/caticat/mint-green-theme/issues/1))
+- Automatic one-time migration: clears `workbench.colorCustomizations` and
+  `editor.tokenColorCustomizations` written by older versions on first activation
+- Note: changing a color setting now requires a window reload
+  (a "Reload Now" prompt appears automatically)
+
 ### v0.1.1
 
 - Add semantic highlighting support (`"semanticHighlighting": true`) — fixes Go/gopls token colors
@@ -116,6 +126,14 @@ MIT
 命令面板（`Ctrl+Shift+P`）→ 运行 `Mint Green Theme: Reset All Colors to Default`。
 
 ## 更新日志
+
+### v0.2.0
+
+- 修复：插件不再写入 User Settings，卸载后 `settings.json` 无任何残留
+  （修复 [#1](https://github.com/caticat/mint-green-theme/issues/1)）
+- 自动一次性迁移：首次激活时清除旧版本写入的 `workbench.colorCustomizations`
+  和 `editor.tokenColorCustomizations`
+- 注意：修改颜色配置后需要重载窗口（会自动弹出"Reload Now"提示）
 
 ### v0.1.1
 
