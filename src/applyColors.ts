@@ -1,73 +1,110 @@
 import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
 import { UI_COLOR_KEYS, TOKEN_COLOR_KEYS, TOKEN_SCOPES, SEMANTIC_TOKEN_KEYS } from './colors';
 
-// Read mintGreenTheme.* config and apply to workbench.colorCustomizations
-// and editor.tokenColorCustomizations (both TextMate and semantic)
-export async function applyColors(): Promise<void> {
-  const config = vscode.workspace.getConfiguration();
+// Build and write the theme JSON file based on current mintGreenTheme.* config.
+// This avoids writing to User Settings entirely.
+export async function applyColors(context: vscode.ExtensionContext): Promise<void> {
+  // One-time migration: clear legacy settings written by versions < 0.2.0
+  const MIGRATION_KEY = 'colorSettingsMigrated_v0_2_0';
+  const alreadyMigrated = context.globalState.get<boolean>(MIGRATION_KEY, false);
+  if (!alreadyMigrated) {
+    const globalConfig = vscode.workspace.getConfiguration();
+    await globalConfig.update('workbench.colorCustomizations', undefined, vscode.ConfigurationTarget.Global);
+    await globalConfig.update('editor.tokenColorCustomizations', undefined, vscode.ConfigurationTarget.Global);
+    await context.globalState.update(MIGRATION_KEY, true);
+  }
+
   const mintConfig = vscode.workspace.getConfiguration('mintGreenTheme');
 
-  // Build UI color overrides
-  const colorCustomizations: Record<string, string> = {};
+  // --- UI colors ---
+  const colors: Record<string, string> = {};
   for (const [configKey, vscodeKey] of Object.entries(UI_COLOR_KEYS)) {
     const subKey = configKey.replace('mintGreenTheme.', '');
     const value = mintConfig.get<string>(subKey);
     if (value) {
-      colorCustomizations[vscodeKey] = value;
+      colors[vscodeKey] = value;
     }
   }
 
-  await config.update(
-    'workbench.colorCustomizations',
-    colorCustomizations,
-    vscode.ConfigurationTarget.Global
-  );
+  // --- TextMate token rules ---
+  const tokenColors: Array<{ scope: string[]; settings: { foreground: string; fontStyle?: string } }> = [];
 
-  // Build TextMate token color rules
-  const textMateRules: Array<{ scope: string[]; settings: { foreground: string } }> = [];
-  // Build semantic token colors
-  const semanticTokenColors: Record<string, string> = {};
+  // comment gets italic
+  const commentColor = mintConfig.get<string>('token.comment');
+  if (commentColor) {
+    tokenColors.push({ scope: ['comment'], settings: { foreground: commentColor, fontStyle: 'italic' } });
+  }
 
+  // Go constant gets number color (distinct from variable)
+  const numberColor = mintConfig.get<string>('token.number');
+  if (numberColor) {
+    tokenColors.push({ scope: ['variable.other.constant.go'], settings: { foreground: numberColor } });
+  }
+
+  // Go variable scope (must come before generic variable to override)
+  const variableColor = mintConfig.get<string>('token.variable');
+  if (variableColor) {
+    tokenColors.push({ scope: ['variable.other.go'], settings: { foreground: variableColor } });
+  }
+
+  // All other token colors
   for (const configKey of TOKEN_COLOR_KEYS) {
     const subKey = configKey.replace('mintGreenTheme.', '');
     const color = mintConfig.get<string>(subKey);
     if (color) {
-      textMateRules.push({
-        scope: TOKEN_SCOPES[configKey],
-        settings: { foreground: color },
-      });
+      if (configKey === 'mintGreenTheme.token.comment') continue; // already added with fontStyle
+      tokenColors.push({ scope: TOKEN_SCOPES[configKey], settings: { foreground: color } });
+    }
+  }
+
+  // --- Semantic token colors ---
+  const semanticTokenColors: Record<string, string> = {};
+  for (const configKey of TOKEN_COLOR_KEYS) {
+    const subKey = configKey.replace('mintGreenTheme.', '');
+    const color = mintConfig.get<string>(subKey);
+    if (color) {
       for (const semanticType of SEMANTIC_TOKEN_KEYS[configKey]) {
         semanticTokenColors[semanticType] = color;
       }
     }
   }
 
-  // Fixed semantic tokens not exposed as user config
-  // namespace (Go package names), enumMember, macro share colors with related tokens
-  const functionColor = mintConfig.get<string>('token.function');
-  const numberColor = mintConfig.get<string>('token.number');
-  if (functionColor) {
-    semanticTokenColors['namespace'] = '#007055';
-    // Go-specific TextMate scopes: constant gets distinct color, others use variable color
-    textMateRules.unshift(
-      { scope: ['variable.other.constant.go'], settings: { foreground: '#B0006B' } },
-    );
-  }
+  // Fixed semantic tokens: namespace uses a distinct color, not exposed as user config
+  semanticTokenColors['namespace'] = '#CC3300';
+
+  // enumMember and macro share number color
   if (numberColor) {
     semanticTokenColors['enumMember'] = numberColor;
     semanticTokenColors['macro'] = numberColor;
   }
 
-  await config.update(
-    'editor.tokenColorCustomizations',
-    { textMateRules, semanticTokenColors },
-    vscode.ConfigurationTarget.Global
+  // --- Assemble and write theme JSON ---
+  const themeJson = {
+    $schema: 'vscode://schemas/color-theme',
+    name: 'Mint Green',
+    type: 'light',
+    semanticHighlighting: true,
+    colors,
+    semanticTokenColors,
+    tokenColors,
+  };
+
+  const themePath = path.join(context.extensionPath, 'themes', 'mint-green-color-theme.json');
+  fs.writeFileSync(themePath, JSON.stringify(themeJson, null, 2), 'utf8');
+
+  const action = await vscode.window.showInformationMessage(
+    'Mint Green Theme: Colors updated. Reload window to apply changes.',
+    'Reload Now'
   );
+  if (action === 'Reload Now') {
+    await vscode.commands.executeCommand('workbench.action.reloadWindow');
+  }
 }
 
-// Reset all mintGreenTheme.* settings to undefined (restores package.json defaults)
-// then re-apply
-export async function resetColors(): Promise<void> {
+// Reset: clear all mintGreenTheme.* user overrides, then regenerate theme JSON
+export async function resetColors(context: vscode.ExtensionContext): Promise<void> {
   const mintConfig = vscode.workspace.getConfiguration('mintGreenTheme');
 
   const allKeys = [
@@ -79,5 +116,5 @@ export async function resetColors(): Promise<void> {
     await mintConfig.update(key, undefined, vscode.ConfigurationTarget.Global);
   }
 
-  await applyColors();
+  await applyColors(context);
 }

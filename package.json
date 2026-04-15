@@ -1,8 +1,8 @@
 {
   "name": "mint-green-theme",
   "displayName": "Mint Green Theme",
-  "description": "A mint green color theme with fully configurable colors and reset-to-default support.",
-  "version": "0.1.1",
+  "description": "A mint green color theme with fully configurable colors. Does not modify User Settings.",
+  "version": "0.2.0",
   "publisher": "panjie039",
   "license": "MIT",
   "repository": {
@@ -13,8 +13,12 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Themes"],
-  "activationEvents": ["onStartupFinished"],
+  "categories": [
+    "Themes"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "themes": [
@@ -399,6 +403,7 @@
     "package": "vsce package"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
     "@types/vscode": "^1.85.0",
     "@vscode/vsce": "^3.7.1",
     "typescript": "^6.0.2"
