@@ -61,13 +61,22 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 
 ## Changelog
 
+### v0.2.2
+
+- Fix: repeated reload prompts no longer appear after installing or reloading VS Code
+- Fix: the extension no longer clears user-level `workbench.colorCustomizations`
+  or `editor.tokenColorCustomizations`
+- Theme files are rewritten only when generated colors actually change
+- If you used an older version and still see unexpected colors, manually check
+  those two VS Code settings before removing them
+
 ### v0.2.0
 
 - Fix: extension no longer writes to User Settings — uninstalling leaves no
   trace in `settings.json`
   (fixes [#1](https://github.com/caticat/mint-green-theme/issues/1))
-- Automatic one-time migration: clears `workbench.colorCustomizations` and
-  `editor.tokenColorCustomizations` written by older versions on first activation
+- Note: versions before v0.2.2 attempted an automatic one-time cleanup of
+  color customization settings; this behavior has been removed
 - Note: changing a color setting now requires a window reload
   (a "Reload Now" prompt appears automatically)
 
@@ -127,12 +136,20 @@ MIT
 
 ## 更新日志
 
+### v0.2.2
+
+- 修复：安装或重载 VS Code 后不再重复弹出 reload 提示
+- 修复：插件不再清空用户级 `workbench.colorCustomizations`
+  或 `editor.tokenColorCustomizations`
+- 只有生成的主题颜色确实变化时，才会重写主题文件
+- 如果你使用过旧版本并仍看到异常颜色，请先手动检查这两个 VS Code 设置，
+  确认后再自行移除
+
 ### v0.2.0
 
 - 修复：插件不再写入 User Settings，卸载后 `settings.json` 无任何残留
   （修复 [#1](https://github.com/caticat/mint-green-theme/issues/1)）
-- 自动一次性迁移：首次激活时清除旧版本写入的 `workbench.colorCustomizations`
-  和 `editor.tokenColorCustomizations`
+- 注意：v0.2.2 之前的版本曾尝试自动清理颜色自定义设置；此行为现已移除
 - 注意：修改颜色配置后需要重载窗口（会自动弹出"Reload Now"提示）
 
 ### v0.1.1

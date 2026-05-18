@@ -3,19 +3,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { UI_COLOR_KEYS, TOKEN_COLOR_KEYS, TOKEN_SCOPES, SEMANTIC_TOKEN_KEYS } from './colors';
 
+type ApplyColorsOptions = {
+  promptReload?: boolean;
+};
+
 // Build and write the theme JSON file based on current mintGreenTheme.* config.
 // This avoids writing to User Settings entirely.
-export async function applyColors(context: vscode.ExtensionContext): Promise<void> {
-  // One-time migration: clear legacy settings written by versions < 0.2.0
-  const MIGRATION_KEY = 'colorSettingsMigrated_v0_2_0';
-  const alreadyMigrated = context.globalState.get<boolean>(MIGRATION_KEY, false);
-  if (!alreadyMigrated) {
-    const globalConfig = vscode.workspace.getConfiguration();
-    await globalConfig.update('workbench.colorCustomizations', undefined, vscode.ConfigurationTarget.Global);
-    await globalConfig.update('editor.tokenColorCustomizations', undefined, vscode.ConfigurationTarget.Global);
-    await context.globalState.update(MIGRATION_KEY, true);
-  }
-
+export async function applyColors(context: vscode.ExtensionContext, options: ApplyColorsOptions = {}): Promise<boolean> {
   const mintConfig = vscode.workspace.getConfiguration('mintGreenTheme');
 
   // --- UI colors ---
@@ -92,7 +86,17 @@ export async function applyColors(context: vscode.ExtensionContext): Promise<voi
   };
 
   const themePath = path.join(context.extensionPath, 'themes', 'mint-green-color-theme.json');
-  fs.writeFileSync(themePath, JSON.stringify(themeJson, null, 2), 'utf8');
+  const nextThemeContents = `${JSON.stringify(themeJson, null, 2)}\n`;
+  const currentThemeContents = fs.existsSync(themePath) ? fs.readFileSync(themePath, 'utf8') : undefined;
+  const changed = currentThemeContents !== nextThemeContents;
+
+  if (changed) {
+    fs.writeFileSync(themePath, nextThemeContents, 'utf8');
+  }
+
+  if (!changed || !options.promptReload) {
+    return changed;
+  }
 
   const action = await vscode.window.showInformationMessage(
     'Mint Green Theme: Colors updated. Reload window to apply changes.',
@@ -101,6 +105,8 @@ export async function applyColors(context: vscode.ExtensionContext): Promise<voi
   if (action === 'Reload Now') {
     await vscode.commands.executeCommand('workbench.action.reloadWindow');
   }
+
+  return changed;
 }
 
 // Reset: clear all mintGreenTheme.* user overrides, then regenerate theme JSON
@@ -116,5 +122,5 @@ export async function resetColors(context: vscode.ExtensionContext): Promise<voi
     await mintConfig.update(key, undefined, vscode.ConfigurationTarget.Global);
   }
 
-  await applyColors(context);
+  await applyColors(context, { promptReload: true });
 }

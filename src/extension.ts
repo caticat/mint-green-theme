@@ -2,11 +2,11 @@ import * as vscode from 'vscode';
 import { applyColors, resetColors } from './applyColors';
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
-  await applyColors(context);
+  await applyColors(context, { promptReload: false });
 
   const configListener = vscode.workspace.onDidChangeConfiguration(async (e) => {
     if (e.affectsConfiguration('mintGreenTheme')) {
-      await applyColors(context);
+      await applyColors(context, { promptReload: true });
     }
   });
 
