@@ -66,7 +66,7 @@ export async function applyColors(context: vscode.ExtensionContext, options: App
   }
 
   // Fixed semantic tokens: namespace uses a distinct color, not exposed as user config
-  semanticTokenColors['namespace'] = '#CC3300';
+  semanticTokenColors['namespace'] = '#5F6A00';
 
   // enumMember and macro share number color
   if (numberColor) {

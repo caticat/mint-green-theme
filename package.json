@@ -55,17 +55,17 @@
           },
           "mintGreenTheme.editor.lineHighlightBackground": {
             "type": "string",
-            "default": "#1100ff20",
+            "default": "#00000012",
             "description": "Editor current line highlight background"
           },
           "mintGreenTheme.editor.selectionBackground": {
             "type": "string",
-            "default": "#ff212190",
+            "default": "#4A90E280",
             "description": "Editor selection background"
           },
           "mintGreenTheme.editor.selectionHighlightBackground": {
             "type": "string",
-            "default": "#ff212150",
+            "default": "#4A90E230",
             "description": "Editor selection highlight background"
           },
           "mintGreenTheme.editor.findMatchBackground": {
@@ -90,7 +90,7 @@
           },
           "mintGreenTheme.editorLineNumber.foreground": {
             "type": "string",
-            "default": "#2BA7BF",
+            "default": "#1A6E7E",
             "description": "Editor line number foreground color"
           },
           "mintGreenTheme.editorWidget.background": {
@@ -130,7 +130,7 @@
           },
           "mintGreenTheme.statusBar.background": {
             "type": "string",
-            "default": "#7AAD7E",
+            "default": "#3F7F43",
             "description": "Status bar background (bottom bar)"
           },
           "mintGreenTheme.statusBar.foreground": {
@@ -235,17 +235,17 @@
         "properties": {
           "mintGreenTheme.token.comment": {
             "type": "string",
-            "default": "#4A7A4A",
+            "default": "#62766A",
             "description": "Token color: comments"
           },
           "mintGreenTheme.token.string": {
             "type": "string",
-            "default": "#C05000",
+            "default": "#A84800",
             "description": "Token color: strings"
           },
           "mintGreenTheme.token.keyword": {
             "type": "string",
-            "default": "#5533CC",
+            "default": "#4527A0",
             "description": "Token color: keywords"
           },
           "mintGreenTheme.token.number": {
@@ -255,22 +255,22 @@
           },
           "mintGreenTheme.token.function": {
             "type": "string",
-            "default": "#0055CC",
+            "default": "#0060B8",
             "description": "Token color: function names"
           },
           "mintGreenTheme.token.type": {
             "type": "string",
-            "default": "#8800BB",
+            "default": "#8A2BA8",
             "description": "Token color: types and classes"
           },
           "mintGreenTheme.token.variable": {
             "type": "string",
-            "default": "#007055",
+            "default": "#00695C",
             "description": "Token color: variables"
           },
           "mintGreenTheme.token.parameter": {
             "type": "string",
-            "default": "#8B4513",
+            "default": "#6B4F1D",
             "description": "Token color: function parameters"
           }
         }
@@ -355,17 +355,17 @@
           },
           "mintGreenTheme.statusBar.debuggingBackground": {
             "type": "string",
-            "default": "#5A8A5A",
+            "default": "#A65A1E",
             "description": "Status bar background while debugging"
           },
           "mintGreenTheme.statusBar.noFolderBackground": {
             "type": "string",
-            "default": "#8AB88E",
+            "default": "#4F6E7E",
             "description": "Status bar background when no folder is open"
           },
           "mintGreenTheme.button.background": {
             "type": "string",
-            "default": "#5A9A5A",
+            "default": "#3D7A41",
             "description": "Primary button background color"
           },
           "mintGreenTheme.badge.background": {
@@ -385,17 +385,17 @@
         "properties": {
           "mintGreenTheme.gitDecoration.modifiedResourceForeground": {
             "type": "string",
-            "default": "#B8860B",
+            "default": "#7A5A00",
             "description": "File tree color for modified files"
           },
           "mintGreenTheme.gitDecoration.untrackedResourceForeground": {
             "type": "string",
-            "default": "#1A7A4A",
+            "default": "#0F6B3C",
             "description": "File tree color for untracked files"
           },
           "mintGreenTheme.gitDecoration.deletedResourceForeground": {
             "type": "string",
-            "default": "#A0522D",
+            "default": "#8E3F1F",
             "description": "File tree color for deleted files"
           }
         }

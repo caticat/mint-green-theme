@@ -40,14 +40,15 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 
 | Token | Color | Example |
 | ----- | ----- | ------- |
-| Comment | `#4A7A4A` gray-green italic | `// note` |
-| Keyword | `#5533CC` indigo | `func`, `if`, `for` |
-| Type / Struct | `#8800BB` red-purple | `int32`, `Player` |
-| String | `#C05000` deep orange | `"hello"` |
+| Comment | `#62766A` gray-sage italic | `// note` |
+| Keyword | `#4527A0` deep indigo | `func`, `if`, `for` |
+| Type / Struct | `#8A2BA8` orchid purple | `int32`, `Player` |
+| String | `#A84800` burnt orange | `"hello"` |
 | Number / Constant | `#B0006B` deep rose | `0`, `MaxCount` |
-| Function / Method | `#0055CC` deep blue | `BizErr()`, `Init()` |
-| Variable | `#007055` deep teal | `ctx`, `rankId` |
-| Parameter | `#8B4513` saddle brown | `p`, `te` |
+| Function / Method | `#0060B8` deep blue | `BizErr()`, `Init()` |
+| Variable | `#00695C` deep teal | `ctx`, `rankId` |
+| Parameter | `#6B4F1D` dark bronze | `p`, `te` |
+| Namespace / Package | `#5F6A00` olive | `fmt`, `strings` |
 
 ## UI Color Reference
 
@@ -57,7 +58,7 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 | Sidebar | `#BCD8BF` |
 | Terminal / Panel | `#D0F0D0` |
 | Activity bar / Title bar | `#A8C8AB` |
-| Status bar | `#7AAD7E` |
+| Status bar | `#3F7F43` |
 | Input / Dropdown | `#E8F5E9` |
 
 ## Changelog
@@ -67,6 +68,20 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 - Support the VS Code Agents Window: declare `capabilities.agentsWindow.supported`
   so the extension is enabled there and the Mint Green theme (including custom
   colors) applies instead of falling back to the default dark theme
+- Fix: static theme JSON now includes the find / selection / line highlight
+  defaults, so they apply before the extension activates
+- Color tuning for readability (WCAG contrast) and token distinction:
+  - Line numbers `#1A6E7E`, status bar `#3F7F43` (debugging: orange `#A65A1E`,
+    no folder: slate `#4F6E7E`), button `#3D7A41`
+  - Git decorations darkened: modified `#7A5A00`, untracked `#0F6B3C`,
+    deleted `#8E3F1F`
+  - Selection changed from red to soft blue (`#4A90E280`, highlight
+    `#4A90E230`); current line highlight is now a neutral `#00000012`
+  - Syntax tokens re-balanced so similar hues no longer collide: comment
+    `#62766A`, string `#A84800`, keyword `#4527A0`, function `#0060B8`,
+    type `#8A2BA8`, variable `#00695C`, parameter `#6B4F1D`,
+    namespace olive `#5F6A00`
+  - Colors you customized in settings are not affected
 
 ### v0.2.2
 

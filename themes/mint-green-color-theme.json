@@ -9,15 +9,15 @@
     "editor.findMatchBackground": "#fbff0071",
     "editor.findMatchHighlightBackground": "#00bfff69",
     "editor.findRangeHighlightBackground": "#ff99006e",
-    "editor.selectionBackground": "#ff212190",
-    "editor.selectionHighlightBackground": "#ff212150",
-    "editor.lineHighlightBackground": "#1100ff20",
+    "editor.selectionBackground": "#4A90E280",
+    "editor.selectionHighlightBackground": "#4A90E230",
+    "editor.lineHighlightBackground": "#00000012",
     "editor.wordHighlightBackground": "#B0D4FF80",
     "editor.wordHighlightStrongBackground": "#FFD70080",
     "editorBracketMatch.background": "#B8E0C870",
     "editorBracketMatch.border": "#5A9A5A",
     "editorGutter.background": "#CCE8CF",
-    "editorLineNumber.foreground": "#2BA7BF",
+    "editorLineNumber.foreground": "#1A6E7E",
     "editorWidget.background": "#E0F0E0",
     "breadcrumb.background": "#CCE8CF",
     "editorGroupHeader.tabsBackground": "#c1d3c1",
@@ -36,17 +36,17 @@
     "titleBar.activeBackground": "#A8C8AB",
     "titleBar.activeForeground": "#1A3A1A",
     "titleBar.inactiveBackground": "#B8D4BB",
-    "statusBar.background": "#7AAD7E",
+    "statusBar.background": "#3F7F43",
     "statusBar.foreground": "#F0FFF0",
-    "statusBar.debuggingBackground": "#5A8A5A",
-    "statusBar.noFolderBackground": "#8AB88E",
+    "statusBar.debuggingBackground": "#A65A1E",
+    "statusBar.noFolderBackground": "#4F6E7E",
     "panel.background": "#D0F0D0",
     "terminal.background": "#D0F0D0",
     "input.background": "#E8F5E9",
     "input.border": "#A8C8AB",
     "dropdown.background": "#E8F5E9",
     "focusBorder": "#5A9A5A",
-    "button.background": "#5A9A5A",
+    "button.background": "#3D7A41",
     "badge.background": "#2E7D32",
     "notifications.background": "#E0F0E0",
     "list.hoverBackground": "#B8DDB8",
@@ -59,27 +59,27 @@
     "editorRuler.foreground": "#A0C0A060",
     "editorWhitespace.foreground": "#B0D0B0",
     "tab.unfocusedActiveBackground": "#C0DCC0",
-    "gitDecoration.modifiedResourceForeground": "#B8860B",
-    "gitDecoration.untrackedResourceForeground": "#1A7A4A",
-    "gitDecoration.deletedResourceForeground": "#A0522D"
+    "gitDecoration.modifiedResourceForeground": "#7A5A00",
+    "gitDecoration.untrackedResourceForeground": "#0F6B3C",
+    "gitDecoration.deletedResourceForeground": "#8E3F1F"
   },
   "semanticTokenColors": {
-    "comment": "#4A7A4A",
-    "string": "#C05000",
-    "keyword": "#5533CC",
+    "comment": "#62766A",
+    "string": "#A84800",
+    "keyword": "#4527A0",
     "number": "#B0006B",
-    "function": "#0055CC",
-    "method": "#0055CC",
-    "type": "#8800BB",
-    "class": "#8800BB",
-    "interface": "#8800BB",
-    "struct": "#8800BB",
-    "enum": "#8800BB",
-    "typeParameter": "#8800BB",
-    "variable": "#007055",
-    "property": "#007055",
-    "parameter": "#8B4513",
-    "namespace": "#CC3300",
+    "function": "#0060B8",
+    "method": "#0060B8",
+    "type": "#8A2BA8",
+    "class": "#8A2BA8",
+    "interface": "#8A2BA8",
+    "struct": "#8A2BA8",
+    "enum": "#8A2BA8",
+    "typeParameter": "#8A2BA8",
+    "variable": "#00695C",
+    "property": "#00695C",
+    "parameter": "#6B4F1D",
+    "namespace": "#5F6A00",
     "enumMember": "#B0006B",
     "macro": "#B0006B"
   },
@@ -89,7 +89,7 @@
         "comment"
       ],
       "settings": {
-        "foreground": "#4A7A4A",
+        "foreground": "#62766A",
         "fontStyle": "italic"
       }
     },
@@ -106,7 +106,7 @@
         "variable.other.go"
       ],
       "settings": {
-        "foreground": "#007055"
+        "foreground": "#00695C"
       }
     },
     {
@@ -114,7 +114,7 @@
         "string"
       ],
       "settings": {
-        "foreground": "#C05000"
+        "foreground": "#A84800"
       }
     },
     {
@@ -123,7 +123,7 @@
         "storage"
       ],
       "settings": {
-        "foreground": "#5533CC"
+        "foreground": "#4527A0"
       }
     },
     {
@@ -140,7 +140,7 @@
         "support.function"
       ],
       "settings": {
-        "foreground": "#0055CC"
+        "foreground": "#0060B8"
       }
     },
     {
@@ -153,7 +153,7 @@
         "storage.type"
       ],
       "settings": {
-        "foreground": "#8800BB"
+        "foreground": "#8A2BA8"
       }
     },
     {
@@ -162,7 +162,7 @@
         "variable.other"
       ],
       "settings": {
-        "foreground": "#007055"
+        "foreground": "#00695C"
       }
     },
     {
@@ -170,7 +170,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "foreground": "#8B4513"
+        "foreground": "#6B4F1D"
       }
     }
   ]
