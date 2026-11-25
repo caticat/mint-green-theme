@@ -2,7 +2,7 @@
   "name": "mint-green-theme",
   "displayName": "Mint Green Theme",
   "description": "A mint green color theme with fully configurable colors. Does not modify User Settings.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "panjie039",
   "license": "MIT",
   "repository": {
@@ -20,6 +20,11 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
+  "capabilities": {
+    "agentsWindow": {
+      "supported": true
+    }
+  },
   "contributes": {
     "themes": [
       {

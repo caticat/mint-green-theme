@@ -10,6 +10,7 @@ A Visual Studio Code color theme based on mint green (`#CCE8CF`). Every color is
 - Full semantic highlighting support (Go/gopls and other LSP languages)
 - **Every color is configurable** via VS Code Settings (`mintGreenTheme.*`)
 - **One command to reset all colors to default**: `Mint Green Theme: Reset All Colors to Default`
+- Works in the VS Code **Agents Window** as well as regular editor windows
 
 ## Installation
 
@@ -60,6 +61,12 @@ Run `Mint Green Theme: Reset All Colors to Default` from the Command Palette (`C
 | Input / Dropdown | `#E8F5E9` |
 
 ## Changelog
+
+### v0.2.3
+
+- Support the VS Code Agents Window: declare `capabilities.agentsWindow.supported`
+  so the extension is enabled there and the Mint Green theme (including custom
+  colors) applies instead of falling back to the default dark theme
 
 ### v0.2.2
 
